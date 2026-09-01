@@ -13,6 +13,11 @@ pipeline {
                 echo 'Testing started'
             }
         }
+      stage('Build') {
+    steps {
+        sh 'python3 app.py'
+      }
+    }
 
         stage('Deploy') {
             steps {
